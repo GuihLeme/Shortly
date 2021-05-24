@@ -1,0 +1,135 @@
+@import './conf';
+
+.intro {
+  background: white;
+  background-image: url('/illustration-working.svg');
+  background-repeat: no-repeat;
+  background-position: 125% 35%;
+
+  width: 100%;
+  height: 45rem;
+
+  > div {
+    @include margin-page;
+
+    .texts {
+      margin-top: 10rem;
+      max-width: 40rem;
+
+      p {
+        font-size: 1.5rem;
+        color: var(--grayish-violet);
+
+        margin: 1.5rem 0 2.5rem 0;
+      }
+    }
+  }
+}
+
+.content {
+  background: #eeeff5;
+
+  .shortener {
+    transform: translateY(-50%);
+  }
+
+  .resultsContainer {
+    .urlContainer {
+      @include margin-page;
+
+      height: 4.5rem;
+
+      padding: 0 1.5rem 0 2rem;
+
+      background: white;
+      border-radius: .5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 1rem;
+
+      p {
+        flex: 1;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        margin-right: 2rem;
+      }
+
+      span {
+        color: var(--cyan);
+        margin-right: 1.5rem;
+      }
+
+      button {
+        height: 2.5rem;
+        width: 6.25rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        border-radius: .5rem;
+        background: var(--cyan);
+        color: white;
+
+        font-weight: 500;
+        font-size: 1.125rem;
+        font-family: 'Poppins', sans-serif;
+
+        transition: all .2s;
+
+        > span {
+          color: white;
+          margin: 0;
+        }
+
+        &:hover {
+          filter: brightness(1.1);
+          cursor: pointer;
+        }
+
+        &:focus {
+          background: var(--dark-violet);
+
+          span {
+            display: none;
+            visibility: hidden;
+          }
+
+          &:focus::after {
+            content: 'Copied!';
+
+
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .details {
+    @include margin-page;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 8.75rem 0 5rem 0;
+    }
+  }
+}

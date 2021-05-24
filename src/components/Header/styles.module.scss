@@ -1,0 +1,43 @@
+@import '../../styles/sass/conf';
+
+.header {
+  @include margin-page;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  font-weight: 500;
+  font-size: 1rem;
+
+  margin-top: 3rem;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin-left: 3rem;
+
+    a {
+      margin-right: 2rem;
+      color: var(--grayish-violet);
+
+      &:hover {
+        color: var(--very-dark-violet);
+      }
+    }
+
+    .credentials {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+      margin-left: auto;
+    }
+  }
+}

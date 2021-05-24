@@ -1,0 +1,44 @@
+@import '../../styles/sass/conf';
+
+.container {
+  @include margin-page;
+
+  width: 100%;
+  height: 10rem;
+
+  background: var(--dark-violet);
+  background-image: url('/bg-shorten-desktop.svg');
+
+  border-radius: .5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4rem;
+
+    button {
+      height: 4rem;
+      width: 10.5rem;
+
+      background: var(--cyan);
+      color: white;
+      border: none;
+      border-radius: .5rem;
+
+      font-weight: 500;
+      font-size: 1.125rem;
+      font-family: 'Poppins', sans-serif;
+
+      transition: all .2s;
+
+
+
+      &:hover {
+        filter: brightness(1.1);
+        cursor: pointer;
+      }
+    }
+
+
+}

@@ -1,0 +1,75 @@
+@import '../../styles/sass/conf';
+
+.cards{
+  @include margin-page;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  margin-bottom: 5rem;
+
+  .bar {
+    position: absolute;
+    height: .5rem;
+    width: 75%;
+    background: var(--cyan);
+
+  }
+
+
+  .card {
+    height: 16.75rem;
+    width: 21.875rem;
+
+    background: white;
+    border-radius: .5rem;
+
+    position: relative;
+
+    margin: 0 auto;
+
+    .badge {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
+
+      background: var(--dark-violet);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0;
+      left: 2rem;
+      transform: translateY(-50%);
+    }
+
+    .content {
+      padding: 3.75rem 2rem;
+
+      p {
+        font-size: 1rem;
+        padding-top: 1.5rem;
+        color: var(--grayish-violet);
+      }
+    }
+
+    &:nth-child(2) {
+      transform: translateY(-2.5rem);
+    }
+
+    &:last-child {
+      transform: translateY(2.5rem);
+    }
+
+
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
