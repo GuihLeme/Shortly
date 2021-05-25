@@ -6,17 +6,12 @@ import Input from '../Input';
 import styles from './styles.module.scss';
 
 const ShortenContainer: React.FC = () => {
-
-
-
-
-
   return (
     <div className={styles.container}>
         <Input
           name="shortenURL"
           type="text"
-          placeholder="Search for a country..."
+          placeholder="Shorten a link here..."
         />
         <button type="submit">Shorten it!</button>
     </div>

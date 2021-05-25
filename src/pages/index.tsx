@@ -123,8 +123,8 @@ const Home: React.FC<HomeProps> = () => {
         </div>
 
       </section>
-        <GetStarted />
-        <Footer />
+      <GetStarted />
+      <Footer />
     </>
   )
 

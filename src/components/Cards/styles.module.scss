@@ -71,5 +71,78 @@
       margin-right: 2.5rem;
     }
   }
+
+  @media #{$BREAKPOINT-TABLET-LAND} {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+
+    width: 100%;
+
+    .bar {
+      width: 0.5rem;
+      height: 70%;
+
+      top: 5rem;
+    }
+
+    .card {
+      margin: 0;
+      margin-top: 2rem;
+      height: 100%;
+
+      .badge {
+        top: -15%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    width: 100%;
+
+    .bar {
+      width: 0.5rem;
+      height: 70%;
+
+      top: 5rem;
+    }
+
+    .card {
+      width: 100%;
+
+      margin: 3rem 0;
+
+      .badge {
+        top: -15%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:nth-child(2) {
+        transform: none;
+      }
+
+      &:last-child {
+        transform: none;
+      }
+
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
 }
 

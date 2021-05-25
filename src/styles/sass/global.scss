@@ -39,13 +39,18 @@ h1 {
   font-size: 5.25rem;
   font-weight: 700;
   line-height: 6rem;
+
+  @media #{$BREAKPOINT-MOBILE} {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
 }
 
 h2 {
   font-size: 2.5rem;
 
   @media #{$BREAKPOINT-MOBILE} {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 

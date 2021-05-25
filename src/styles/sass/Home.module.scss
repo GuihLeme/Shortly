@@ -4,7 +4,7 @@
   background: white;
   background-image: url('/illustration-working.svg');
   background-repeat: no-repeat;
-  background-position: 125% 35%;
+  background-position: 95% 25%;
 
   width: 100%;
   height: 45rem;
@@ -12,9 +12,28 @@
   > div {
     @include margin-page;
 
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+
+
+    img {
+      position: absolute;
+      right: -15rem;
+      top: 5rem;
+    }
+
     .texts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
       margin-top: 10rem;
       max-width: 40rem;
+      z-index: 2;
+
 
       p {
         font-size: 1.5rem;
@@ -24,6 +43,59 @@
       }
     }
   }
+
+  @media #{$BREAKPOINT-TABLET-LAND} {
+    height: auto;
+    margin-bottom: 8rem;
+
+    background-position: 15% 25%;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      .texts {
+        padding-top: 25rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+
+  }
+
+
+
+  @media #{$BREAKPOINT-MOBILE} {
+    height: auto;
+    margin-bottom: 2rem;
+
+    background-position: 15% 25%;
+
+    div {
+      .texts {
+        padding-top: 35rem;
+
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
 }
 
 .content {
@@ -104,15 +176,11 @@
 
           &:focus::after {
             content: 'Copied!';
-
-
           }
         }
       }
     }
   }
-
-
 
   .details {
     @include margin-page;
@@ -129,7 +197,55 @@
       align-items: center;
       justify-content: space-between;
 
-      margin: 8.75rem 0 5rem 0;
+      margin: 3rem 0 ;
+      width: 100%;
     }
   }
+
+  @media #{$BREAKPOINT-TABLET-LAND} {
+    .details {
+      text-align: center;
+    }
+  }
+
+
+  @media #{$BREAKPOINT-MOBILE} {
+    .shortener {
+      transform: none;
+    }
+
+    .resultsContainer {
+      .urlContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        font-size: 1rem;
+
+        height: auto;
+        padding: 1rem;
+
+        p {
+          width: 100%;
+          margin: 0;
+          padding-bottom: .5rem;
+          border-bottom: 1px solid var(--gray);
+        }
+
+        span {
+          padding: .5rem 0;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    .details {
+      text-align: center;
+    }
+  }
+
 }
