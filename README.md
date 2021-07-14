@@ -37,7 +37,7 @@ Clone this repository, open its folder and install dependencies with:
 yarn
 ```
 
-Run it using:
+Then, run it using:
 
 ```sh
 yarn start
